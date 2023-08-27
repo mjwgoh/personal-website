@@ -1,0 +1,103 @@
+<!-- https://tailwindcss.com/docs/installation -->
+
+<html lang="en">
+
+<head>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+
+    <meta name=”robots” content=”noindex”>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Goh</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+
+</head>
+
+<body class="bg-transparent dark:bg-gray-900">
+    <div
+      class="md:flex md:grid-cols-2 mx-auto max-w-screen-md justify-center items-center gap-10 px-10 py-4 pt-20"
+    >
+      <figure class="">
+        <img
+          class="mb-5 md:mb-0 max-w-xs w-auto h-36 object-contain rounded-lg"
+          src="headshot.jpg"
+          alt="Michael Goh Headshot"
+        />
+      </figure>
+      <div class="text-left">
+        <!-- ⬅️ THIS DIV WILL BE CENTERED -->
+        <h1 class="leading-tight text-3xl lg:text-6xl mb-2 dark:text-white">
+          Hello, I'm Mike! <span class="wave">👋</span>
+        </h1>
+        <h2
+          class="leading-tight text-1xl lg:text-2xl text-gray-600 mb-2 dark:text-gray-200"
+        >
+          Currently, I'm a Consumer Mentor at
+          <a
+            class="hover:underline underline-offset-2"
+            href="https://www.questventures.com"
+            >Quest Ventures</a
+          >, an early-stage VC.
+        </h2>
+        <p
+          class="leading-tight text-sm italic font-serif text-gray-500 dark:text-gray-400"
+        >
+          let's connect...
+        </p>
+      </div>
+    </div>
+
+
+    <div class="flex flex-col items-center mx-auto max-w-screen-md gap-2 p-4 pb-6">
+        <a class="flex w-full justify-center bg-gray-100 rounded-lg py-6 px-5 border-2 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-800 hover:cursor-pointer" href="https://twitter.com/mjwgoh/" target=”_blank” >
+            <div>Twitter</div>
+        </a>
+        <a class="flex w-full justify-center bg-gray-100 rounded-lg py-6 px-5 border-2 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-800" href="https://www.linkedin.com/in/mjwgoh/" target=”_blank” >
+            <div>Linkedin</div>
+        </a>
+        <a class="flex w-full justify-center bg-gray-100 rounded-lg py-6 px-5 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-800" href="https://staging.bsky.app/profile/mjwgoh.bsky.social" target=”_blank” >
+            Bluesky
+        </a>
+        <a class="flex w-full justify-center bg-gray-100 rounded-lg py-6 px-5 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-800 md:hidden" href="weixin://dl/chat?mjwgoh">
+            WeChat
+        </a>
+        <a class="flex w-full justify-center bg-gray-100 rounded-lg py-6 px-5 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-800 md:hidden" href="https://telegram.me/mjwgoh" target=”_blank” >
+            Telegram
+        </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+
+</body>
+
+<footer class="bg-transparent dark:bg-gray-900 p-5">
+    <hr class="flex mx-auto max-w-screen-md h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+    <div class="flex flex-wrap items-center mx-auto max-w-screen-md gap-2 p-4 pb-6">
+        <a class="flex w-full bg-gray-100 rounded-lg py-3 px-5 hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-800" href="https://www.jwgoh.com">
+            <span style="white-space: nowrap;">👨 About</span>
+        </a>
+        <a class="flex w-full bg-gray-100 rounded-lg py-3 px-5 hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-800" href="projects.html">
+            <span style="white-space: nowrap;">🛠️ Projects</span>
+        </a>
+        <a class="flex w-full bg-gray-100 rounded-lg py-3 px-5 hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-800" href="https://substack.jwgoh.com/">
+            <span style="white-space: nowrap;">📝 Substack</span>
+        </a>
+    </div>
+
+    <p class="pt-4 text-sm text-gray-500 text-center dark:text-gray-400">© 2023 Michael Goh. All Rights Reserved.</p>
+</footer>
+
+</html>

@@ -1,0 +1,290 @@
+<!-- https://tailwindcss.com/docs/installation -->
+
+<html lang="en">
+  <head>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Michael Goh</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (
+        localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+
+  <body class="bg-transparent dark:bg-gray-900 md:border-8">
+    <script>
+      function prof_mode_toggle(toggle_start, toggle_end) {
+        var x = document.getElementById(toggle_start);
+        var y = document.getElementById(toggle_end);
+
+        if (y.style.display === "none") {
+          y.style.display = "block";
+          x.style.display = "none";
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        } else {
+          x.style.display = "block";
+          y.style.display = "none";
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      }
+    </script>
+
+    <div
+      class="md:flex md:grid-cols-2 mx-auto max-w-screen-md justify-center items-center gap-10 px-10 py-4 pt-20"
+    >
+      <figure class="">
+        <img
+          class="mb-5 md:mb-0 max-w-xs w-auto h-36 object-contain rounded-lg"
+          src="headshot.jpg"
+          alt="Michael Goh Headshot"
+        />
+      </figure>
+      <div class="text-left">
+        <!-- ⬅️ THIS DIV WILL BE CENTERED -->
+        <h1 class="leading-tight text-3xl lg:text-6xl mb-2 dark:text-white">
+          Hello, I'm Mike! <span class="wave">👋</span>
+        </h1>
+        <h2
+          class="leading-tight text-1xl lg:text-2xl text-gray-600 mb-2 dark:text-gray-200"
+        >
+          Currently, I'm a Consumer Mentor at
+          <a
+            class="hover:underline underline-offset-2"
+            href="https://www.questventures.com"
+            >Quest Ventures</a
+          >, an early-stage VC.
+        </h2>
+        <p
+          class="leading-tight text-sm italic font-serif text-gray-500 dark:text-gray-400"
+        >
+          the exhibition begins below...
+        </p>
+      </div>
+    </div>
+
+    <div
+      id="normal"
+      class="flex mx-auto max-w-screen-md justify-center gap-6 px-10 py-4 pt-10"
+      style="display: block"
+    >
+      <div class="flex flex-col w-full text-gray-600 dark:text-gray-200">
+        <p class="mb-3 text-lg">TLDR on what I've done: 📊💹😇🚀📦🎓</p>
+        <p class="mb-3 text-lg">
+          and what I do during my free time: ✈️♠️💰🧬🕺
+        </p>
+        <p class="mb-3 text-lg">In the past, I:</p>
+        <ul class="mb-3 text-lg space-y-1 list-disc list-inside">
+          <li>
+            Aligned logos and built pie charts at
+            <a
+              class="hover:underline underline-offset-2"
+              href="https://www.bain.com"
+              >ben and jerry</a
+            >
+          </li>
+          <li>
+            Tried to link many dots with fuzzy lines for a
+            <a
+              class="hover:underline underline-offset-2"
+              href="https://www.stashaway.com"
+              >robot that manages money for people</a
+            >
+          </li>
+          <li>
+            Drank fizzy grape juice and hung out with
+            <a
+              class="hover:underline underline-offset-2"
+              href="https://www.bansea.org"
+              >winged-people</a
+            >
+          </li>
+          <li>
+            Babysat (and was babysat by)
+            <a
+              class="hover:underline underline-offset-2"
+              href="https://www.questventures.com"
+              >visionaries</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:underline underline-offset-2"
+              href="https://www.businesstimes.com.sg/lifestyle/style/battle-of-the-boxes"
+              >Packed boxes</a
+            >, chatted up the press, and spoke to cameras
+          </li>
+          <li>
+            Studied
+            <a
+              class="hover:underline underline-offset-2"
+              href="https://www.ft.com/content/1e31e76f-aeba-35fa-a1bb-b6967fc4f40b"
+              >witchcraft-with-a-fake-nobel</a
+            >
+            at
+            <a
+              class="hover:underline underline-offset-2"
+              href="https://www.ox.ac.uk"
+              >Harry Potter university</a
+            >
+          </li>
+        </ul>
+        <p class="mb-3 text-lg">During my free time, I:</p>
+        <ul class="mb-3 text-lg space-y-1 list-disc list-inside">
+          <li>
+            Try not to
+            <a
+              class="hover:underline underline-offset-2"
+              href="https://www.ougc.org"
+              >crash any planes</a
+            >
+          </li>
+          <li>
+            Occasionally behave like a degenerate and
+            <a
+              class="hover:underline underline-offset-2"
+              href="https://www.facebook.com/groups/oxforduniversitypokersociety/"
+              >pray for picture cards</a
+            >
+          </li>
+          <li>
+            Spend too much money
+            <a
+              class="hover:underline underline-offset-2"
+              href="https://mschf.com"
+              >collecting MSCHF merch</a
+            >
+          </li>
+          <li>
+            Ask people to
+            <a
+              class="hover:underline underline-offset-2"
+              href="https://www.singaporecancersociety.org.sg"
+              >put money in tin cans</a
+            >
+          </li>
+          <li>
+            Do the tango to
+            <a
+              class="hover:underline underline-offset-2"
+              href="http://tomorrowland.com"
+              >super rad fire beats</a
+            >
+            (every few years or so)
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      id="boring"
+      class="flex mx-auto max-w-screen-md justify-center gap-6 px-10 py-4 pt-10"
+      style="display: none"
+    >
+      <div class="flex flex-col w-full text-gray-600 dark:text-gray-200">
+        <p class="text-lg">
+          Michael is currently a Consumer Mentor at Quest
+          Ventures, where he partners with relentless disruptors, exceptional
+          visionaries, and creative change-makers. Prior to this, he was an Engineering Fellow and Investor, also at Quest.<br /><br />He started his
+          career founding and working at several venture-backed early-stage
+          startups. His projects and perspectives have been cited in
+          publications including The Business Times, Asia Insurance Review,
+          Zaobao, TNW, and Marketing Magazine. He has also been invited to speak
+          at a number of institutions, including at Nanyang Technological
+          University, Singapore Management University, Citigroup, and Horasis.
+          <br /><br />Outside the startup ecosystem, he has spent time in
+          management consulting and finance. He has backpacked across Southeast
+          Asia and is working towards becoming a certified glider pilot.
+          Passionate about impact, he can also be found supporting
+          entrepreneurship-related, educational access, and mental health
+          causes.<br /><br />
+          Michael earned his Bachelor of Arts in Economics and Management from
+          the University of Oxford, where he was a college scholar.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="flex mx-auto max-w-screen-md grid-cols-2 items-center gap-10 px-10 py-4 dark:text-white"
+    >
+      <p class="text-lg">
+        Say Hello -
+        <a class="hover:underline underline-offset-2" href="https://www.twitter.com/mjwgoh">Twitter</a>,
+        <a class="hover:underline underline-offset-2" href="https://staging.bsky.app/profile/mjwgoh.bsky.social">Bluesky</a>,
+        <a class="hover:underline underline-offset-2" href="https://www.linkedin.com/in/mjwgoh">LinkedIn</a>
+      </p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+  </body>
+
+  <footer class="bg-transparent dark:bg-gray-900 p-5">
+    <hr
+      class="flex mx-auto max-w-screen-md h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"
+    />
+
+    <div class="flex items-center mx-auto max-w-screen-md gap-2 p-4 pb-6">
+      <a
+        class="flex w-full bg-gray-100 rounded-lg py-3 px-5 hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-800"
+        href="projects.html"
+      >
+        🛠️ Projects
+      </a>
+      <a
+        class="flex w-full bg-gray-100 rounded-lg py-3 px-5 hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-800"
+        href="https://substack.jwgoh.com/"
+      >
+        📝 Substack
+      </a>
+    </div>
+
+    <div class="flex justify-center text-center p-4">
+      <label class="relative inline-flex items-center cursor-pointer">
+        <input
+          type="checkbox"
+          value=""
+          class="sr-only peer"
+          onclick="prof_mode_toggle('less_fun', 'more_fun'); prof_mode_toggle('normal', 'boring')"
+        />
+        <div
+          class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-gray-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-gray-600"
+        ></div>
+        <span
+          id="less_fun"
+          class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+          style="display: block"
+          >press for less fun</span
+        >
+        <span
+          id="more_fun"
+          class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+          style="display: none"
+          >press for more fun</span
+        >
+      </label>
+    </div>
+
+    <p class="pt-4 text-sm text-gray-500 text-center dark:text-gray-400">
+      © 2023 Michael Goh. All Rights Reserved.
+    </p>
+  </footer>
+</html>

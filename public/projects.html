@@ -1,0 +1,198 @@
+<!-- https://tailwindcss.com/docs/installation -->
+
+<html lang="en">
+
+<head>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Goh</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+
+</head>
+
+<body class="bg-transparent dark:bg-gray-900 md:border-8">
+
+    <div class="md:flex md:grid-cols-2 mx-auto max-w-screen-md justify-center items-center gap-10 px-10 py-4 pt-20">
+        <figure class="">
+            <img class="mb-5 md:mb-0 max-w-xs w-auto h-36 object-contain rounded-lg"
+                src="headshot.jpg"
+                alt="Michael Goh Headshot">
+        </figure>
+        <div class="text-left"> <!-- ⬅️ THIS DIV WILL BE CENTERED -->
+            <h1 class="leading-tight text-3xl lg:text-6xl mb-2 dark:text-white">
+                Hello, I'm Mike! 
+                <span class="wave">👋</span>
+            </h1>
+            <h2 class="leading-tight text-1xl lg:text-2xl text-gray-600 mb-2 dark:text-gray-200">
+                Over the years, I've worked on a number of projects. Some serious, others extremely silly.
+            </h2>
+            <p class="leading-tight text-sm italic font-serif text-gray-500 dark:text-gray-400">
+                thou shalt not pass judgements on silly projects...
+            </p>
+        </div>
+    </div>
+
+    <div class="flex-col mx-auto leading-tight max-w-screen-md px-10 py-4 pt-1"> <!-- Container for all tiles -->
+
+        <div class="pb-4 flex-wrap">
+            <a href="https://huggingface.co/spaces/mjwgoh/jianyang" target="_blank">
+                <div class="flex flex-col mx-auto w-full max-w-full p-4 bg-transparent bg-gray-200 border-2 border-gray-800 text-black dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
+                    <div class="flex mx-auto w-full gap-3 text-sm pb-4">
+                        <div class="border-pink-700 border-2 max-w-2xl rounded-full justify-center items-center py-0.5 dark:text-white px-5">i was bored
+                        </div>
+                        <div class="border-green-700 border-2 max-w-2xl rounded-full justify-center items-center py-0.5 dark:text-white px-5">
+                            ai
+                        </div>
+                    </div>
+                    <div class="dark:text-gray-200">
+                        <h1 class="text-2xl">Not SeeFood</h1>
+                        <p class="text-sm">Built using PyTorch, Fast.AI, Hugging Face, and Gradio.</p>
+                        <br/>
+                    </div>
+                    <div class="justify-end dark:text-gray-200">Replicated Jianyang's (HBO: Silicon Valley) hotdog classification algorithm in 1 day.</div>
+                    
+                    <div class="pt-4">
+                        <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">WATCH: <a href="https://twitter.com/emilychangtv?ref_src=twsrc%5Etfw">@EmilyChangTV</a> chats w/ Jian-Yang about his &quot;Not Hotdog&quot; app. <br><br>Download it today (really): <a href="https://t.co/7N6a1Asfge">https://t.co/7N6a1Asfge</a> <a href="https://twitter.com/hashtag/SiliconValleyHBO?src=hash&amp;ref_src=twsrc%5Etfw">#SiliconValleyHBO</a> <a href="https://t.co/99TBhaiHYk">pic.twitter.com/99TBhaiHYk</a></p>&mdash; Tech At Bloomberg (@TechAtBloomberg) <a href="https://twitter.com/TechAtBloomberg/status/863944535419666432?ref_src=twsrc%5Etfw">May 15, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="pb-4 flex-wrap">
+            <a href="" target="_blank">
+                <div class="flex flex-col mx-auto w-full max-w-full p-4 bg-transparent bg-gray-200 border-2 border-gray-800 text-black dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
+                    <div class="flex flex-wrap mx-auto w-full gap-3 text-sm pb-4">
+                        <div class="border-pink-700 border-2 max-w-2xl rounded-full justify-center items-center py-0.5 dark:text-white px-5">i was bored
+                        </div>
+                        <div class="border-green-700 border-2 max-w-2xl rounded-full justify-center items-center py-0.5 dark:text-white px-5">
+                            frontend
+                        </div>
+                        <div class="border-green-700 border-2 max-w-2xl rounded-full justify-center items-center py-0.5 dark:text-white px-5">
+                            backend
+                        </div>
+                    </div>
+                    <div class="dark:text-gray-200">
+                        <h1 class="text-2xl">Expensive Messages</h1>
+                        <p class="text-sm">Built using Tailwind, React (NextJS), MongoDB, and Twilio.</p>
+                        <br/>
+                    </div>
+                    <div class="justify-end dark:text-gray-200">Turned SMSes into Veblen goods. Send hundred dollar messages to your significant other.
+                    </div>
+                </div>
+            </a>    
+        </div>
+
+        <div class="pb-4 flex-wrap">
+            <a href="https://www.irwins-study.com" target="_blank">
+                <div class="flex flex-col mx-auto w-full max-w-full p-4 bg-transparent bg-gray-200 border-2 border-gray-800 text-black dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
+                    <div class="flex flex-wrap mx-auto w-full gap-3 text-sm pb-4">
+                        <div class="border-pink-700 border-2 max-w-2xl rounded-full justify-center items-center py-0.5 dark:text-white px-5">consumer
+                        </div>
+                        <div class="border-green-700 border-2 max-w-2xl rounded-full justify-center items-center py-0.5 dark:text-white px-5">
+                            frontend
+                        </div>
+                        <div class="border-green-700 border-2 max-w-2xl rounded-full justify-center items-center py-0.5 dark:text-white px-5">
+                            backend
+                        </div>
+                    </div>
+                    <div class="dark:text-gray-200">
+                        <h1 class="text-2xl">The Knowledge Loft</h1>
+                        <p class="text-sm">Built using Tailwind, React (NextJS), PostgreSQL, and Twilio.</p>
+                        <br/>
+                    </div>
+                    <div class="justify-end dark:text-gray-200">Online tutoring platform and learning management system to bridge tutors with underprivileged youth. Sold to Irwin's Study.
+                    </div>
+                </div>
+            </a>    
+        </div>
+
+        <div class="pb-4 flex-wrap">
+            <a href="https://www.businesstimes.com.sg/lifestyle/style/battle-of-the-boxes" target="_blank">
+                <div class="flex flex-col mx-auto w-full max-w-full p-4 bg-transparent bg-gray-200 border-2 border-gray-800 text-black dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
+                    <div class="flex flex-wrap mx-auto w-full gap-3 text-sm pb-4">
+                        <div class="border-pink-700 border-2 max-w-2xl rounded-full justify-center items-center py-0.5 dark:text-white px-5">consumer
+                        </div>
+                        <div class="border-green-700 border-2 max-w-2xl rounded-full justify-center items-center py-0.5 dark:text-white px-5">
+                            frontend
+                        </div>
+                        <div class="border-green-700 border-2 max-w-2xl rounded-full justify-center items-center py-0.5 dark:text-white px-5">
+                            backend
+                        </div>
+                    </div>
+                    <div class="dark:text-gray-200">
+                        <h1 class="text-2xl">Lowinsky</h1>
+                        <p class="text-sm">Built using Laravel and PyTorch.</p>
+                        <br/>
+                    </div>
+                    <div class="justify-end dark:text-gray-200">
+                        Lowinsky was South East Asia's first fashion forward retailer that blended the potential of big data with the bespoke service of personal fashion stylists.
+                        <br/>
+                        <br/>
+                        <p class=""> Press Mentions: 
+                            <a class="hover:underline underline-offset-2" href="https://www.businesstimes.com.sg/lifestyle/style/battle-of-the-boxes" target="_blank">Business Times Singapore, </a>
+                            <a class="hover:underline underline-offset-2" href="https://www.herworld.com/shopping/best-fashion-subscription-boxes-shipping-singapore-style-clothes" target="_blank" >HerWorld Magazine, </a>
+                            <a class="hover:underline underline-offset-2" href="https://www.cleo.com.sg/fashion/fashion-subscription-boxes/" target="_blank" >CLEO Magazine, </a>
+                            <a class="hover:underline underline-offset-2" href="https://www.mariefranceasia.com/fashion/serial-shopper/shopping-guide/best-subscription-boxes-singapore-230330.html#item=1" target="_blank" >Marie France Asia, </a>
+                            <a class="hover:underline underline-offset-2" href="http://www.womensweekly.com.sg/beauty-style/the-best-fashion-subscription-boxes-to-subscribe-to-now/" target="_blank" >Women's Weekly Magazine, </a>
+                            <a class="hover:underline underline-offset-2" href="https://vulcanpost.com/538851/subscriptionbox-singapore/" target="_blank" >Vulcan Post, </a>
+                            <a class="hover:underline underline-offset-2" href="http://asia.be.com/lifestyle/8-subscription-box-services-check-month-63955.html#item=2" target="_blank" >Be Asia, </a>
+                            <a class="hover:underline underline-offset-2" href="https://www.asiaone.com/world/life-isnt-just-box-chocolates" target="_blank" >My Paper</a>
+                        </p>
+                    </div>
+                </div>
+            </a>    
+        </div>
+
+        <div class="pb-4 flex-wrap">
+            <a href="https://www.jwgoh.com" target="_blank">
+                <div class="flex flex-col mx-auto w-full max-w-full p-4 bg-transparent bg-gray-200 border-2 border-gray-800 text-black dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
+                    <div class="flex mx-auto w-full gap-3 text-sm pb-4">
+                        <div class="border-green-700 border-2 max-w-2xl rounded-full justify-center items-center py-0.5 dark:text-white px-5">
+                            frontend
+                        </div>
+                    </div>
+                    <div class="dark:text-gray-200">
+                        <h1 class="text-2xl">Personal Website</h1>
+                        <p class="text-sm">Built using Tailwind and Plain Old HTML.</p>
+                        <br/>
+                    </div>
+                    <div class="justify-end dark:text-gray-200">Nothing much to see here...</div>
+                </div>
+            </a>    
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+
+</body>
+
+<footer class="bg-transparent dark:bg-gray-900 p-5">
+    <hr class="flex mx-auto max-w-screen-md h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+    <div class="flex items-center mx-auto max-w-screen-md gap-2 p-4 pb-6">
+        <a class="flex w-full bg-gray-100 rounded-lg py-3 px-5 hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-800" href="index.html">
+            🏠 Home
+        </a>
+        <a class="flex w-full bg-gray-100 rounded-lg py-3 px-5 hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-800" href="https://substack.jwgoh.com/">
+            📝 Substack
+        </a>
+    </div>
+
+    <p class="pt-4 text-sm text-gray-500 text-center dark:text-gray-400">© 2023 Michael Goh. All Rights Reserved.</p>
+</footer>
+
+</html>
